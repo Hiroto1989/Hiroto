@@ -1,0 +1,935 @@
+@charset "UTF-8";
+
+body {
+    margin: 50px;
+    padding: 0;
+    color: #555;
+    background-color: #fff;
+    font-family: Josefin Sans;
+}
+
+.main {
+    z-index: 10;
+    margin: 2vw;
+    transition: all .15s;
+}
+
+p {
+    position: absolute;
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5vh;
+    margin-top: -2%;
+    color: #555555;
+}
+
+.h1 {
+    margin-top: 7%;
+    margin-bottom: 5%;
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10vh;
+    line-height: 6.5vh;
+}
+
+@media screen and (max-width: 750px) {
+    .h1 {
+        margin-bottom: 0;
+        font-size: 8vw;
+    }
+}
+
+/* 選択中のタブ */
+
+.main .active {
+    color: #222;
+}
+
+.main .non-active {
+    color: #C6D5CB;
+}
+
+h1:hover {
+    color: #222;
+}
+
+.not-hover {
+    color: #C6D5CB;
+}
+
+
+#wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+aside {
+    position: fixed;
+    right: 50px;
+    z-index: 10;
+    float: right;
+    list-style: none;
+    height: 100%;
+}
+
+aside li {
+    list-style: none;
+    text-align: right;
+    margin-bottom: 26px;
+}
+
+.bg {
+    position: absolute;
+    z-index: -10;
+    width: 65%;
+    height: 190%;
+    top:22%;
+    left:18%;
+    background-color: #E8F3EC;
+
+}
+
+.bg-under {
+    position: absolute;
+    z-index: -10;
+    width: 65%;
+    height: 80%;
+    top:420%;
+    left:18%;
+    background-color: #E8F3EC;
+
+}
+
+.line {
+    position: absolute;
+    width: 0px;
+    height: 15vw;
+    /*top: 90%;*/
+    left: 50%;
+    border-left: 2px solid #555;
+}
+
+.scroll-wrapper {
+    position: relative;
+    height: 18vw;
+}
+
+.scroll {
+    position: absolute;
+    left: 52%;
+    top: 2rem;
+
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 各タブのコンテンツはデフォルトで非表示 */
+
+.main-content div {
+    /*display: none;*/
+}
+
+#main-images {
+    position: absolute;
+}
+
+#main-images img {
+    opacity: 0;
+}
+
+#main-a__image1 {
+    position: absolute;
+    left: 50px;
+    top: 270px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-a__image2 {
+    position: absolute;
+    left: 650px;
+    top: 300px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-a__image3 {
+    position: absolute;
+    left: 600px;
+    top: 0px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-b__image1 {
+    position: absolute;
+    left: 550px;
+    top: 350px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-b__image2 {
+    position: absolute;
+    width: 400px;
+    left: 100px;
+    top: 270px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-b__image3 {
+    position: absolute;
+    width: 250px;
+    left: 650px;
+    top: 30px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-c__image1 {
+    position: absolute;
+    left: 150px;
+    top: 15px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-c__image2 {
+    position: absolute;
+    left: 700px;
+    top: 100px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-c__image3 {
+    position: absolute;
+    left: 250px;
+    top: 350px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-d__image1 {
+    position: absolute;
+    width: 517px;
+    height: 279px;
+    left: 150px;
+    top: 15px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-d__image2 {
+    position: absolute;
+    width: 478px;
+    height: 250px;
+    left: 700px;
+    top: 150px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-d__image3 {
+    position: absolute;
+    width: 403px;
+    height: 199px;
+    left: 550px;
+    top: 450px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-e__image1 {
+    position: absolute;
+    width: 517px;
+    left: 50px;
+    top: 100px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-e__image2 {
+    position: absolute;
+    width: 478px;
+    left: 600px;
+    top: 0px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#main-e__image3 {
+    position: absolute;
+    width: 600px;
+    left: 600px;
+    top: 280px;
+    box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.16);
+}
+
+#linkedin {
+    position: absolute;
+    right: 0px;
+    top: 550px;
+}
+
+.about-wrapper {
+    position: relative;
+    height: 60vh;
+}
+
+#about {
+    position: relative;
+    padding-top: 4vh;
+    left: 3vw;
+    height: 45vh;
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10vh;
+}
+
+.about {
+    margin-top: 2vh;
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#line_about {
+    position: absolute;
+    bottom: 2vh;
+    right: 0;
+    width: 225px;
+}
+
+#design_concept {
+    width: 100%;
+    margin-top: 3vw;
+    margin-left: 2vw;
+}
+
+.more {
+    right: 3vw;
+    bottom: 5px;
+    
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+
+#title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 300%;
+    line-height: 1.2;
+}
+
+#sub-title {
+    position: absolute;
+
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#discription {
+    height: 20%;
+
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#UX-wrapper{
+    position: relative;
+}
+
+
+.UX{
+    position: relative;
+    top: 5vh;
+}
+
+#d-wrapper{
+    width: 40%;
+    top: 30vh;
+}
+
+
+#UX_image1{
+    position: absolute;
+    width: 80%;
+    z-index: -5;
+    margin-left: 5vw;
+}
+
+.FFYL_d{
+    position: absolute;
+    top: 8vh;
+}
+
+.line_1 {
+    position: absolute;
+    height: 0;
+    width: 40%;
+    top: 5vh;
+    border-bottom: 2px solid #555;
+}
+
+.TM{
+    position: relative;
+    left: 80vh;
+    top: 10vh;
+}
+
+#TM_image1{
+    position: relative;
+    width: 80%;
+    z-index: -5;
+    margin-left: 5vw;
+}
+
+
+
+.tokyo_d{
+    position: absolute;
+    top: 8vh;
+}
+
+.line_2 {
+    position: absolute;
+    height: 0;
+    width: 40%;
+    top: 5vh;
+    border-bottom: 2px solid #555;
+}
+
+.SD{
+    position: relative;
+    left: -5vh;
+    top: 15vh;
+}
+
+#SD_image1{
+    position: absolute;
+    width: 80%;
+    z-index: -5;
+    margin-left: 5vw;
+}
+
+.service_d{
+    position: absolute;
+    top: 8vh;
+}
+
+.line_3 {
+    position: absolute;
+    height: 0;
+    width: 40%;
+    top: 5vh;
+    border-bottom: 2px solid #555;
+}
+
+#skills{
+    position: absolute;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 300%;
+    line-height: 1.2;
+    
+    left: 43%;
+    top: 416%;
+}
+
+.design{
+    position: absolute;
+
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    
+    left: 80px;
+    top: 446%;
+}
+
+.programming{
+    position: absolute;
+
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    
+    left: 80px;
+    top: 464%;
+}
+
+.line_4 {
+    position: absolute;
+    width: 20%;
+    height: 0;
+    top: 443.5%;
+    left: 12%;
+    border-bottom: 2px solid #555;
+}
+
+.line_5 {
+    position: absolute;
+    width: 20%;
+    height: 0;
+    top: 461.5%;
+    left: 12%;
+    border-bottom: 2px solid #555;
+}
+
+.programming_d{
+    position: absolute;
+    width: 50%;
+    height: 20%;
+    
+    left: 25%;
+    top: 478%;
+
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.copyright{
+    position: absolute;
+
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    
+    left: 39%;
+    top: 498%;
+}
+
+#figma{
+    position: absolute;
+    left: 37%;
+    top: 440%;
+}
+
+#Sketch{
+    position: absolute;
+    left: 44%;
+    top: 441.5%;
+}
+
+#XD{
+    position: absolute;
+    left: 52%;
+    top: 440.9%;
+}
+
+#Invision{
+    position: absolute;
+    left: 60%;
+    top: 440.9%;
+}
+
+#vue{
+    position: absolute;
+    left: 36%;
+    top: 457%;
+}
+
+#JS{
+    position: absolute;
+    left: 44%;
+    top: 457%;
+}
+
+#css{
+    position: absolute;
+    left: 51%;
+    top: 454.5%;
+}
+
+#html{
+    position: absolute;
+    left: 59%;
+    top: 454.5%;
+}
+
+.bg_about{
+    position: absolute;
+    z-index: -10;
+    width: 65%;
+    height: 105rem;
+    top:22%;
+    left:18%;
+    background-color: #E8F3EC;
+
+}
+
+.bg_experience{
+    position: absolute;
+    z-index: -10;
+    width: 65%;
+    height: 255%;
+    top:322%;
+    left:18%;
+    background-color: #E8F3EC;
+}
+
+#space{
+    width: 100%;
+    height: 55vh;
+}
+
+#space2{
+    width: 100%;
+    height: 70vh;
+}
+
+#about_content{
+    /*display: none;*/
+}
+
+#about_title{
+    position: relative;
+    left: 10vw;
+    top: 2vh;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 300%;
+    line-height: 80px;
+}
+
+#my_profile{
+    position: relative;
+    width: 50%;
+    height: 20%;
+    
+    text-align: right;
+    left: 25%;
+    top: 10vh;
+
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#SKILLS_INTERESTS{
+    width: 40vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 45%;
+    top: 20vh;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10vh;
+    line-height: 1.2;
+}
+
+#illust_UX {
+    position: relative;
+    width:100%;
+    height:100%;
+    top: 5vh;
+    left: 2vw;
+}
+
+.UIUX{
+    position: absolute;
+    top: 30vh;
+}
+
+.UIUX_d{
+    position: absolute;
+    top: 38vh;
+}
+
+.line_6 {
+    position: relative;
+    width: 10vw;
+    top: 35vh;
+    height: 0;
+    border-bottom: 2px solid #555;
+}
+
+.Planning{
+    position: absolute;
+    top: 20vh;
+}
+
+.Planning_d{
+    position: absolute;
+    top: 28vh;
+}
+
+#illust_planning {
+    position: relative;
+    width:100%;
+    height:100%;
+    top: 5vh;
+    left: 2vw;
+}
+
+.line_7 {
+    position: relative;
+    width: 10vw;
+    top: 25vh;
+    height: 0;
+    border-bottom: 2px solid #555;
+}
+
+.Video_Board_Games{
+    position: absolute;
+    top: 20vh;
+}
+
+.Video_Board_Games_d{
+    position: absolute;
+    top: 28vh;
+}
+
+.line_8 {
+    position: relative;
+    width: 10vw;
+    top: 25vh;
+    height: 0;
+    border-bottom: 2px solid #555;
+}
+
+#illust_games {
+    position: relative;
+    width:100%;
+    height:100%;
+    top: 5vh;
+    left: 5vw;
+}
+
+.Travelling{
+    position: absolute;
+    top: 5vh;
+}
+
+.Travelling_d{
+    position: absolute;
+    top: 13vh;
+}
+
+.line_9 {
+    position: relative;
+    width: 10vw;
+    top: 10vh;
+    height: 0;
+    border-bottom: 2px solid #555;
+}
+
+#illust_Travelling {
+    position: relative;
+    width:90%;
+    left: 5vw;
+}
+
+#hiro {
+    position: relative;
+    z-index: 10;
+    top: 12.2%;
+    left: 80px;
+    transition: all .15s;
+}
+
+#experience{
+    position: absolute;
+    right: 15%;
+    top: 317%;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 300%;
+    line-height: 80px;
+}
+
+.history2020{
+    position: absolute;
+    left: 80px;
+    top: 345%;
+}
+
+.line_10 {
+    position: absolute;
+    width: 20vw;
+    height: 0;
+    top: 346.5%;
+    left: 12%;
+    border-bottom: 2px solid #555;
+}
+
+.history2020_period{
+    position: absolute;
+    left: 35%;
+    top: 345%;
+}
+
+.history2020_title{
+    position: absolute;
+    left: 35%;
+    top: 355%;
+}
+
+.history2020_d{
+    position: absolute;
+    width: 40%;
+    
+    left: 35%;
+    top: 368%;
+    
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.history2019{
+    position: absolute;
+    left: 80px;
+    top: 405%;
+}
+
+.line_11 {
+    position: absolute;
+    width: 20%;
+    height: 0;
+    top: 406.5%;
+    left: 12%;
+    border-bottom: 2px solid #555;
+}
+
+.history2019_period{
+    position: absolute;
+    left: 35%;
+    top: 405%;
+}
+
+.history2019_title{
+    position: absolute;
+    left: 35%;
+    top: 415%;
+}
+
+.history2019_d{
+    position: absolute;
+    width: 40%;
+    
+    left: 35%;
+    top: 428%;
+    
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.history2015{
+    position: absolute;
+    left: 80px;
+    top: 465%;
+}
+
+.line_12 {
+    position: absolute;
+    width: 20%;
+    height: 0;
+    top: 466.5%;
+    left: 12%;
+    border-bottom: 2px solid #555;
+}
+
+.history2015_period{
+    position: absolute;
+    left: 35%;
+    top: 465%;
+}
+
+.history2015_title{
+    position: absolute;
+    left: 35%;
+    top: 475%;
+}
+
+.history2015_d{
+    position: absolute;
+    width: 40%;
+    
+    left: 35%;
+    top: 488%;
+    
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.history2013{
+    position: absolute;
+    left: 80px;
+    top: 525%;
+}
+
+.line_13 {
+    position: absolute;
+    width: 20%;
+    height: 0;
+    top: 526.5%;
+    left: 12%;
+    border-bottom: 2px solid #555;
+}
+
+.history2013_period{
+    position: absolute;
+    left: 35%;
+    top: 525%;
+}
+
+.history2013_title{
+    position: absolute;
+    left: 35%;
+    top: 535%;
+}
+
+.history2013_d{
+    position: absolute;
+    width: 40%;
+    
+    left: 35%;
+    top: 548%;
+    
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.is-hide {
+    display: none;
+}
+
+/* ▼画面サイズ（横幅）が750px以下の場合に適用 */
+@media screen and (max-width: 750px) {
+    #sidebar {
+        display: none;
+    }
+}
+
+
